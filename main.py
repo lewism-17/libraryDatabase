@@ -21,7 +21,7 @@ class App(tk.Tk):
         self.columnconfigure(0, weight=100)
 
         self.testDatabase()
-        self.switchFrame("books")
+        self.switchFrame("login")
         self.mainloop()
 
     def testDatabase(self):
@@ -30,6 +30,10 @@ class App(tk.Tk):
         results = results.fetchall()
         for line in results:
             print(", ".join(line))
+        results = self.cursor.execute("SELECT * from books")
+        results = results.fetchall()
+        for line in results:
+            print(line)
 
     def switchFrame(self,frame):
         # this function switches the currently visible frame.

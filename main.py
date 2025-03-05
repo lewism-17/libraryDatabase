@@ -1,3 +1,4 @@
+
 import sqlite3 as sql
 import tkinter as tk
 import tkinter.font as tkFont
@@ -54,4 +55,3 @@ class App(tk.Tk):
             e1.grid(row=0,column=0, sticky="NSEW")
 
 main = App()
-
